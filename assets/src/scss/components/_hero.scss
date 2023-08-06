@@ -1,0 +1,102 @@
+.hero {
+  @include bg-cover;
+  @include image-set("../img/hero/hero-bg");
+
+  padding-top: calc(var(--header-height) - 28px);
+
+  &__container {
+    display: flex;
+    flex-wrap: nowrap;
+
+    @include tablet {
+      flex-direction: column-reverse;
+      padding-top: 60px;
+    }
+
+    @include small-tablet {
+      padding-top: 80px;
+    }
+  }
+
+  picture {
+    display: block;
+    flex-shrink: 0;
+    margin-right: 125px;
+    padding-top: 170px;
+
+    @include tablet {
+      margin-right: 0;
+      padding-top: 20px;
+    }
+  }
+
+  &__person-img {
+    display: block;
+
+    @include tablet {
+      margin: 0 auto;
+    }
+
+    @include mobile {
+      width: 80%;
+    }
+  }
+
+  &__text {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 0.65em;
+    font-family: var(--font-family-text);
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 120%;
+    text-transform: uppercase;
+
+    span {
+      color: $color-main-green;
+    }
+
+    @include small-tablet {
+      font-size: 32px;
+    }
+
+    @include mobile {
+      font-size: 24px;
+    }
+  }
+
+  &__descr {
+    margin-bottom: 16px;
+    border: 1px solid $color-main-green;
+    border-radius: 10px;
+    padding: 8px 16px;
+    max-width: 540px;
+    font-size: 15px;
+
+    &:last-of-type {
+      margin-bottom: 32px;
+    }
+
+    &--green-text {
+      color: $color-main-green;
+    }
+
+    @include mobile {
+      font-size: 14px;
+    }
+
+    @include tablet {
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+
+  &__button {
+    display: block;
+    margin: 0 auto;
+  }
+}

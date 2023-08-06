@@ -9,12 +9,12 @@ html {
 }
 
 body {
-  background-color: var(--color-light);
+  background-color: $color-white;
 }
 
 .page {
   height: 100%;
-  font-family: var(--font-family);
+  font-family: var(--font-family-text);
   -webkit-text-size-adjust: 100%;
 }
 
@@ -110,4 +110,8 @@ a {
 
 .page--ios .dis-scroll {
   position: relative;
+}
+
+.d-mobile {
+  @include d-mobile (768px);
 }

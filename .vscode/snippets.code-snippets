@@ -3,8 +3,8 @@
     "scope": "html, php",
     "prefix": "g-use",
     "body": [
-      "<svg class=\"\">",
-      "  <use xlink:href=\"img/sprite.svg#$2\"></use>",
+      "<svg class=\"$1\" width=\"$2\" height=\"$3\">",
+      "  <use xlink:href=\"img/sprite.svg#$4\"></use>",
       "</svg>"
     ],
     "description": "Snippet for use svg sprites"
@@ -113,7 +113,7 @@
     "scope": "html",
     "prefix": "g-svgimg",
     "body": [
-      "<img loading=\"lazy\" src=\"$1.$2\" class=\"image\" width=\"$4\" height=\"$5\" alt=\"$3\">"
+      "<img loading=\"lazy\" src=\"$1.$2\" class=\"$6\" width=\"$4\" height=\"$5\" alt=\"$3\">"
     ],
     "description": "Snippet for simple html svg images"
   },

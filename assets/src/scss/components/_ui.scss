@@ -1,0 +1,45 @@
+/* stylelint-disable order/order */
+.button {
+  border-radius: 1.75em;
+  padding: 1em 3.25em;
+  font-weight: 700;
+  font-size: 20px;
+  color: $color-white;
+  background: $color-main-green;
+  transition: background-color 0.3s ease-in;
+
+  &:hover {
+    background-color: $color-button-hover;
+  }
+
+  &:focus,
+  &:active {
+    background-color: $color-button-active;
+  }
+
+  &--stroke {
+    border: 1px solid $color-main-green;
+    padding: 8px 20px;
+    font-weight: 700;
+    font-size: 15px;
+    color: #65a16a;
+    background-color: transparent;
+    transition: all 0.3s ease;
+
+    @include mobile {
+      padding: 8px 16px;
+      font-size: 10px;
+    }
+
+    &:hover {
+      color: $color-white;
+      background-color: $color-main-green;
+    }
+
+    &:focus,
+    &:active {
+      border-color: #abcdae;
+      background-color: #abcdae;
+    }
+  }
+}

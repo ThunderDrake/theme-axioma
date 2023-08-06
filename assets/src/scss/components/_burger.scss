@@ -1,0 +1,10 @@
+.burger {
+  @include burger;
+
+  /* stylelint-disable-next-line order/order */
+  --burger-width: 30px;
+  --burger-height: 22px;
+  --burger-line-height: 2px;
+
+  color: $color-main-green;
+}

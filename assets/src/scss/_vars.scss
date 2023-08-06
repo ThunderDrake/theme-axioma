@@ -1,5 +1,19 @@
 @import "../scss/mixins";
 
 :root {
-
+  --font-family-title: "Inter", sans-serif;
+  --font-family-text: "Montserrat", sans-serif;
+  --content-width: 1110px;
+  --container-offset: 15px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
 }
+
+$color-black: #000;
+$color-white: #fff;
+$color-main-green: #65a16a;
+$color-button-hover: #6b936e;
+$color-button-active: #527355;
+$color-accent-light: #faf7e8;
+$color-gray-text: #b1b1b1;
+$color-warning: #f00;
+$color-success: #86dd8d;
