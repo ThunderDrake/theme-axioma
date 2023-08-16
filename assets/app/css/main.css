@@ -448,6 +448,7 @@ a {
   color: #000;
   background-color: transparent;
   cursor: pointer;
+  display: none;
   /* stylelint-disable-next-line order/order */
   --burger-width: 30px;
   --burger-height: 22px;
@@ -517,6 +518,13 @@ a {
   transition: -webkit-transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+@media (max-width: 1024px) {
+  .burger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .hero {
@@ -629,6 +637,6 @@ a {
 }
 .hero__button {
   display: block;
-  margin: 0 auto;
+  margin-left: 0;
 }
 /*# sourceMappingURL=main.css.map */
