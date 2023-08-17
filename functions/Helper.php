@@ -117,4 +117,13 @@ class Helper {
 		return ( $show_number ? "$number " : '' ) . $titles[ $title_index ];
 	}
 
+  /**
+   * Преобразование номера телефона в формат ссылки
+   *
+   * @param string $phone
+   * @return string
+   */
+  public function format_phone($phone) {
+    return str_replace([' ', '(', ')', '-'], '', $phone);
+  }
 }
