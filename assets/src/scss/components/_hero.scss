@@ -88,11 +88,6 @@
     @include mobile {
       font-size: 14px;
     }
-
-    @include tablet {
-      margin-right: auto;
-      margin-left: auto;
-    }
   }
 
   &__button {

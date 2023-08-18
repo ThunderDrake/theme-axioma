@@ -1,0 +1,234 @@
+.footer {
+  background: #faf7e8;
+
+  &__container {
+    padding-top: 65px;
+
+    @include small-tablet {
+      padding-top: 30px;
+    }
+  }
+
+  &__top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    border-bottom: 1px solid #c8c8c8;
+    padding-bottom: 65px;
+
+    @include mobile {
+      padding-bottom: 30px;
+    }
+
+    @include tablet {
+      display: grid;
+      grid-template-columns: 1fr 1fr auto;
+      gap: 40px;
+    }
+
+    @include mobile {
+      grid-template-columns: 1fr auto;
+      gap: 20px;
+    }
+  }
+
+  &__nav {
+    flex-shrink: 0;
+    margin-right: 15px;
+
+    .nav__list {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .nav__item:not(:last-child) {
+      margin-bottom: 16px;
+    }
+
+    .nav__link {
+      color: #b1b1b1;
+    }
+
+    @include tablet {
+      grid-column: 2;
+      grid-row: span 2;
+      margin-left: 45px;
+    }
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__logo {
+    margin-right: 15px;
+
+    @include mobile {
+      width: 160px;
+    }
+  }
+
+  &__info {
+    margin-right: 15px;
+
+    &-icon {
+      flex-shrink: 0;
+      margin-right: 8px;
+      fill: #b1b1b1;
+    }
+
+    &-item {
+      display: flex;
+      align-items: flex-start;
+
+      &:not(:last-child) {
+        margin-bottom: 8px;
+      }
+
+      @media (max-width: 600px) {
+        &:not(:last-child) {
+          margin-right: 8px;
+        }
+      }
+    }
+
+    &-text {
+      max-width: 195px;
+      font-weight: 500;
+      font-size: 13px;
+      color: #b1b1b1;
+
+      @media (max-width: 600px) {
+        max-width: none;
+      }
+    }
+
+    @include tablet {
+      grid-row: 2;
+    }
+
+    @include mobile {
+      grid-column: span 2;
+    }
+  }
+
+  &__button-call {
+    border-color: #b1b1b1;
+    color: #b1b1b1;
+
+    @include mobile {
+      justify-self: flex-start;
+      font-size: 15px;
+    }
+  }
+
+  &__scroll-top {
+    position: relative;
+    padding-right: 26px;
+    font-weight: 700;
+    font-size: 15px;
+    color: #b1b1b1;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: -10;
+      top: 2px;
+      width: 16px;
+      height: 16px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.203752 11.7959C-0.0679173 11.5237 -0.0679172 11.0825 0.203752 10.8103L8 3L15.7962 10.8103C16.0679 11.0825 16.0679 11.5237 15.7962 11.7959C15.5246 12.068 15.0841 12.068 14.8124 11.7959L8 4.97115L1.18755 11.7959C0.915884 12.068 0.475421 12.068 0.203752 11.7959Z' fill='%23B1B1B1'/%3E%3C/svg%3E");
+      background-size: cover;
+      background-repeat: no-repeat;
+      transform: translateX(100%);
+    }
+
+    @include mobile {
+      grid-column: 2;
+      grid-row: 1;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    padding: 40px 0;
+    font-weight: 500;
+    font-size: 13px;
+    color: #b1b1b1;
+
+    @include mobile {
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      padding: 20px 0;
+    }
+
+    @media (max-width: 375px) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__copyright {
+    margin-right: 65px;
+
+    @include small-tablet {
+      margin-right: 20px;
+    }
+
+    @include mobile {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__policy {
+    text-decoration: underline;
+    color: inherit;
+    transition: color 0.3s ease;
+
+    @include hover {
+      color: $color-kettleman;
+    }
+
+    @include mobile {
+      display: block;
+      grid-column: span 2;
+      grid-row: 2;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.footer__authors {
+  display: flex;
+  margin-right: 0;
+  margin-left: auto;
+
+  &-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    width: 100px;
+    height: 15px;
+    cursor: pointer;
+
+    span {
+      transition: transform 0.3s ease;
+
+      a {
+        text-decoration: underline;
+        color: $color-kettleman;
+      }
+    }
+
+    &:hover {
+      span {
+        transform: translateY(-100%);
+      }
+    }
+  }
+
+  @media (max-width: 375px) {
+    margin-right: auto;
+  }
+}

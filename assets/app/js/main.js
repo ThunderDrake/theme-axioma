@@ -13,6 +13,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_services_show_more__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/services-show-more */ "./assets/src/js/components/services-show-more.js");
 /* harmony import */ var _components_services_show_more__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_components_services_show_more__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _components_main_form_validation__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/main-form-validation */ "./assets/src/js/components/main-form-validation.js");
+/* harmony import */ var _components_scroll_top__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/scroll-top */ "./assets/src/js/components/scroll-top.js");
+/* harmony import */ var _components_scroll_top__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_components_scroll_top__WEBPACK_IMPORTED_MODULE_3__);
+
 
 
 
@@ -208,6 +211,30 @@ const afterForm = () => {
   console.log('Произошла отправка, тут можно писать любые действия');
 };
 (0,_functions_validate_forms__WEBPACK_IMPORTED_MODULE_0__.validateForms)('.main-form', mainFormRules, afterForm);
+
+/***/ }),
+
+/***/ "./assets/src/js/components/scroll-top.js":
+/*!************************************************!*\
+  !*** ./assets/src/js/components/scroll-top.js ***!
+  \************************************************/
+/***/ (() => {
+
+const btnToTop = document.querySelector('[data-btn-to-top]');
+const onClickBtnToTop = e => {
+  e.preventDefault();
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+};
+const initScrollToTop = () => {
+  if (!btnToTop) {
+    return;
+  }
+  btnToTop.addEventListener('click', onClickBtnToTop);
+};
+initScrollToTop();
 
 /***/ }),
 
