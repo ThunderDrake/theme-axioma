@@ -913,4 +913,230 @@ a {
     margin-bottom: 120px;
   }
 }
+
+.form-section {
+  position: relative;
+  padding: 165px 0 115px;
+  background-image: url("../img/form-section/section-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.form-section__form-wrapper {
+  border-radius: 20px;
+  padding: 40px 32px;
+  max-width: 445px;
+  background-color: #faf7e8;
+}
+@media (max-width: 768px) {
+  .form-section__form-wrapper {
+    margin: 0 auto;
+  }
+}
+@media (max-width: 576px) {
+  .form-section__form-wrapper {
+    padding: 16px;
+  }
+}
+.form-section__title {
+  margin: 0;
+  margin-bottom: 32px;
+  font-weight: 700;
+  font-size: 36px;
+}
+@media (max-width: 768px) {
+  .form-section__title {
+    text-align: center;
+  }
+}
+@media (max-width: 576px) {
+  .form-section__title {
+    font-size: 26px;
+  }
+}
+.form-section picture {
+  position: absolute;
+  right: max(15px, (100% - var(--content-width)) / 2);
+  bottom: 0;
+}
+@media (max-width: 1024px) {
+  .form-section picture {
+    right: max(-115px, (100% - var(--content-width)) / 2);
+  }
+}
+@media (max-width: 768px) {
+  .form-section picture {
+    position: static;
+    display: block;
+  }
+  .form-section picture img {
+    display: block;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 768px) {
+  .form-section {
+    padding-top: 95px;
+    padding-bottom: 0;
+  }
+}
+@media (max-width: 576px) {
+  .form-section {
+    padding-top: 0;
+  }
+}
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.form__item {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-bottom: 8px;
+}
+.form__label {
+  margin-bottom: 8px;
+  font-weight: 700;
+  font-size: 13px;
+  color: #626262;
+}
+.form__input {
+  border: 1px solid transparent;
+  border-radius: 30px;
+  padding: 16px 20px;
+  font-size: 16px;
+  line-height: 150%;
+  /* stylelint-disable-next-line order/order */
+}
+.form__input::-webkit-input-placeholder {
+  color: #b1b1b1;
+}
+.form__input::-moz-placeholder {
+  color: #b1b1b1;
+}
+.form__input:-ms-input-placeholder {
+  color: #b1b1b1;
+}
+.form__input::-ms-input-placeholder {
+  color: #b1b1b1;
+}
+.form__input::placeholder {
+  color: #b1b1b1;
+}
+.form__input:hover {
+  border-color: #e9e9e9;
+}
+.form__input:focus, .form__input:focus-visible, .form__input:active {
+  outline: none;
+  border-color: #d2d2d2;
+}
+.form__button {
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+@media (max-width: 576px) {
+  .form__button {
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+}
+.form .custom-checkbox {
+  position: relative;
+  font-size: 8px;
+  line-height: 185%;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  color: #b1b1b1;
+}
+.form .custom-checkbox__field {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute;
+}
+.form .custom-checkbox__content {
+  display: block;
+  padding-left: 39px;
+  cursor: pointer;
+}
+.form .custom-checkbox__content::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: 1px solid #B1B1B1;
+  width: 24px;
+  height: 24px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+.form .custom-checkbox__content::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 24px;
+  height: 24px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='13' viewBox='0 0 14 13' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M13.2475 0.66408C13.6446 0.920161 13.7471 1.45622 13.4725 1.84079L6.0903 12.1781C5.70867 12.7124 4.92431 12.7402 4.50585 12.2341L0.546307 7.4457C0.245754 7.08222 0.310595 6.5412 0.688525 6.25904C1.04084 5.99601 1.53754 6.05554 1.81772 6.39437L4.40635 9.52492C4.82481 10.031 5.60917 10.0032 5.99079 9.46882L12.1253 0.8787C12.3821 0.519102 12.8761 0.424626 13.2475 0.66408Z' fill='%23B1B1B1'/%3E%3C/svg%3E");
+  background-position: center;
+  background-size: 14px 14px;
+  background-repeat: no-repeat;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+.form .custom-checkbox a {
+  text-decoration: underline;
+  color: inherit;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+.form .custom-checkbox a:hover {
+  color: #626262;
+}
+
+.just-validate-error-field {
+  border-color: #f00 !important;
+}
+
+.just-validate-error-label {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #f00 !important;
+}
+
+.form__input-success {
+  position: absolute;
+  right: 16px;
+  top: calc(50% + 12px);
+  display: none;
+  width: 16px;
+  height: 16px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M6.94191 0.0508614C4.23397 0.426694 1.91342 2.11418 0.751265 4.56085C0.431578 5.23359 0.22096 5.89882 0.0705192 6.72189C-0.0235064 7.23302 -0.0235064 8.76642 0.0705192 9.27755C0.397728 11.0477 1.11985 12.4496 2.3309 13.6598C3.53818 14.8662 4.95985 15.599 6.69745 15.9147C7.15253 15.9974 8.35982 16.0275 8.8638 15.9711C11.0866 15.7156 13.0987 14.5655 14.4151 12.7953C15.1936 11.7543 15.6675 10.6418 15.912 9.29634C15.9947 8.83407 16.0285 7.70657 15.9721 7.16913C15.581 3.4296 12.6211 0.449244 8.87884 0.0320702C8.42 -0.0167885 7.37819 -0.00927162 6.94191 0.0508614ZM12.433 5.32379C12.6662 5.46661 12.8204 5.76352 12.8016 6.0266C12.7903 6.12807 12.7565 6.27841 12.7188 6.35357C12.6399 6.51894 7.76182 11.0064 7.53615 11.1229C7.35563 11.2168 7.04722 11.2131 6.84789 11.1229C6.74634 11.0778 6.25364 10.6042 5.37733 9.72479C4.1738 8.51085 4.05344 8.37931 4.00831 8.2177C3.85035 7.62389 4.3468 7.0902 4.94857 7.21423C5.15166 7.25557 5.16671 7.26684 6.1709 8.26656C6.73129 8.82279 7.20142 9.27755 7.21271 9.27755C7.22775 9.27755 8.2169 8.37931 9.41291 7.28564C11.7635 5.12836 11.7259 5.15843 12.0945 5.20352C12.1885 5.2148 12.339 5.26742 12.433 5.32379Z' fill='%2386DD8D'/%3E%3C/svg%3E");
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.just-validate-success-field + .form__input-success {
+  display: block;
+}
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,67 @@
+.form-section {
+  position: relative;
+  padding: 165px 0 115px;
+  background-image: url("../img/form-section/section-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &__form-wrapper {
+    border-radius: 20px;
+    padding: 40px 32px;
+    max-width: 445px;
+    background-color: $color-accent-light;
+
+    @include small-tablet {
+      margin: 0 auto;
+    }
+
+    @include mobile {
+      padding: 16px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 32px;
+    font-weight: 700;
+    font-size: 36px;
+
+    @include small-tablet {
+      text-align: center;
+    }
+
+    @include mobile {
+      font-size: 26px;
+    }
+  }
+
+  picture {
+    position: absolute;
+    right: max(15px, calc((100% - var(--content-width)) / 2));
+    bottom: 0;
+
+    @include tablet {
+      right: max(-115px, (100% - var(--content-width)) / 2);
+    }
+
+    @include small-tablet {
+      position: static;
+      display: block;
+
+      img {
+        display: block;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  @include small-tablet {
+    padding-top: 95px;
+    padding-bottom: 0;
+  }
+
+  @include mobile {
+    padding-top: 0;
+  }
+}

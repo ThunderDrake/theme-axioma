@@ -1,0 +1,100 @@
+.form {
+  display: flex;
+  flex-direction: column;
+
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 8px;
+  }
+
+  &__label {
+    margin-bottom: 8px;
+    font-weight: 700;
+    font-size: 13px;
+    color: $color-kettleman;
+  }
+
+  &__input {
+    border: 1px solid transparent;
+    border-radius: 30px;
+    padding: 16px 20px;
+    font-size: 16px;
+    line-height: 150%;
+
+    &::placeholder {
+      color: #b1b1b1;
+    }
+
+    &:hover {
+      border-color: #e9e9e9;
+    }
+
+    /* stylelint-disable-next-line order/order */
+    &:focus,
+    &:focus-visible,
+    &:active {
+      outline: none;
+      border-color: #d2d2d2;
+    }
+  }
+
+  &__button {
+    margin-top: 32px;
+    margin-bottom: 32px;
+
+    @include mobile {
+      margin-top: 16px;
+      margin-bottom: 16px;
+    }
+  }
+
+  .custom-checkbox {
+    @include custom-checkbox;
+
+    font-size: 8px;
+    line-height: 185%;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    color: #b1b1b1;
+
+    a {
+      text-decoration: underline;
+      color: inherit;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $color-kettleman;
+      }
+    }
+  }
+}
+
+.just-validate-error-field {
+  border-color: $color-warning !important;
+}
+
+.just-validate-error-label {
+  margin-top: 8px;
+  font-size: 13px;
+  color: $color-warning !important;
+}
+
+.form__input-success {
+  position: absolute;
+  right: 16px;
+  top: calc(50% + 12px);
+  display: none;
+  width: 16px;
+  height: 16px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M6.94191 0.0508614C4.23397 0.426694 1.91342 2.11418 0.751265 4.56085C0.431578 5.23359 0.22096 5.89882 0.0705192 6.72189C-0.0235064 7.23302 -0.0235064 8.76642 0.0705192 9.27755C0.397728 11.0477 1.11985 12.4496 2.3309 13.6598C3.53818 14.8662 4.95985 15.599 6.69745 15.9147C7.15253 15.9974 8.35982 16.0275 8.8638 15.9711C11.0866 15.7156 13.0987 14.5655 14.4151 12.7953C15.1936 11.7543 15.6675 10.6418 15.912 9.29634C15.9947 8.83407 16.0285 7.70657 15.9721 7.16913C15.581 3.4296 12.6211 0.449244 8.87884 0.0320702C8.42 -0.0167885 7.37819 -0.00927162 6.94191 0.0508614ZM12.433 5.32379C12.6662 5.46661 12.8204 5.76352 12.8016 6.0266C12.7903 6.12807 12.7565 6.27841 12.7188 6.35357C12.6399 6.51894 7.76182 11.0064 7.53615 11.1229C7.35563 11.2168 7.04722 11.2131 6.84789 11.1229C6.74634 11.0778 6.25364 10.6042 5.37733 9.72479C4.1738 8.51085 4.05344 8.37931 4.00831 8.2177C3.85035 7.62389 4.3468 7.0902 4.94857 7.21423C5.15166 7.25557 5.16671 7.26684 6.1709 8.26656C6.73129 8.82279 7.20142 9.27755 7.21271 9.27755C7.22775 9.27755 8.2169 8.37931 9.41291 7.28564C11.7635 5.12836 11.7259 5.15843 12.0945 5.20352C12.1885 5.2148 12.339 5.26742 12.433 5.32379Z' fill='%2386DD8D'/%3E%3C/svg%3E");
+  background-size: cover;
+  background-repeat: no-repeat;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.just-validate-success-field + .form__input-success {
+  display: block;
+}
