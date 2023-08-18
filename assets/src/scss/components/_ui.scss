@@ -43,3 +43,16 @@
     }
   }
 }
+
+.section-title {
+  margin: 0;
+  margin-bottom: 1em;
+  font-family: var(--font-family-text);
+  font-weight: 700;
+  font-size: 48px;
+
+  @media (max-width: 650px) {
+    font-size: 32px;
+    text-align: center;
+  }
+}

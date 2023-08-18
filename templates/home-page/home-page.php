@@ -2,7 +2,8 @@
 ct()->header();
 ?>
 <?php
-ct()->template('home-page/parts/hero-section.php')
+ct()->template('home-page/parts/hero-section.php');
+ct()->template('home-page/parts/services.php');
 ?>
 <?php
 ct()->footer();

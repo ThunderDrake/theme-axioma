@@ -249,6 +249,20 @@ a {
   background-color: #abcdae;
 }
 
+.section-title {
+  margin: 0;
+  margin-bottom: 1em;
+  font-family: var(--font-family-text);
+  font-weight: 700;
+  font-size: 48px;
+}
+@media (max-width: 650px) {
+  .section-title {
+    font-size: 32px;
+    text-align: center;
+  }
+}
+
 .header {
   position: absolute;
   left: 0;
@@ -638,5 +652,93 @@ a {
 .hero__button {
   display: block;
   margin-left: 0;
+}
+
+.services {
+  padding-top: 150px;
+  padding-bottom: 120px;
+}
+.services__show-more {
+  display: none;
+}
+@media (max-width: 650px) {
+  .services__show-more {
+    display: block;
+    margin: 0 auto;
+    border-radius: 30px;
+    padding: 10px 60px;
+    font-size: 14px;
+  }
+}
+@media (max-width: 768px) {
+  .services {
+    padding-top: 120px;
+  }
+}
+
+.service-list {
+  margin-bottom: 50px;
+}
+.service-list__item {
+  margin-bottom: 16px;
+  /* stylelint-disable-next-line order/order */
+}
+@media (max-width: 650px) {
+  .service-list__item:nth-child(n+11) {
+    display: none;
+  }
+}
+.service-list__item.is-visible {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.service {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-grid-columns: 3fr 1fr;
+  grid-template-columns: 3fr 1fr;
+  gap: 30px;
+}
+.service__name {
+  border-radius: 32px;
+  padding: 1em 2em;
+  font-weight: 700;
+  font-size: 20px;
+  background-color: #faf7e8;
+}
+@media (max-width: 650px) {
+  .service__name {
+    font-size: 14px;
+  }
+}
+@media (max-width: 650px) {
+  .service__button {
+    margin: 0 auto;
+    max-width: 210px;
+    font-size: 14px;
+  }
+}
+@media (max-width: 650px) {
+  .service {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    gap: 0;
+  }
 }
 /*# sourceMappingURL=main.css.map */
