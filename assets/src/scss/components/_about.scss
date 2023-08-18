@@ -1,0 +1,150 @@
+.about {
+  margin-bottom: 150px;
+
+  &__content-wrapper {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+    border-radius: 20px;
+    padding: 72px;
+    background: $color-silkworm;
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: 25px;
+      top: 50%;
+      width: 280px;
+      height: calc(100% - 72px * 2);
+      background-image: url("../img/about/content-bg-svg.svg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      transform: translateY(-50%);
+
+      @include small-tablet {
+        right: -165px;
+        height: calc(100% - 40px * 2);
+        background-size: contain;
+      }
+
+      @include mobile {
+        display: none;
+      }
+    }
+
+    @include small-tablet {
+      padding: 40px;
+    }
+
+    @include mobile {
+      margin-bottom: 16px;
+      padding: 40px 16px 16px;
+    }
+  }
+
+  &__logo {
+    position: relative;
+    margin-bottom: 72px;
+
+    @include small-tablet {
+      margin-bottom: 30px;
+      width: 370px;
+    }
+
+    @include mobile {
+      width: 215px;
+    }
+  }
+
+  &__text {
+    position: relative;
+    margin: 0;
+    max-width: 640px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 175%;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    @include small-tablet {
+      max-width: 480px;
+    }
+
+    @include mobile {
+      font-size: 14px;
+    }
+  }
+
+  &__company {
+    display: flex;
+    justify-content: space-between;
+
+    picture {
+      flex-shrink: 0;
+      margin-right: 20px;
+
+      @include tablet {
+        flex-basis: 50%;
+        margin-right: 0;
+      }
+
+      @include mobile {
+        display: block;
+        margin-bottom: 16px;
+        width: 100%;
+      }
+    }
+
+    &-image {
+      border-radius: 20px;
+
+      @include mobile {
+        width: 100%;
+      }
+    }
+
+    &-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      max-width: 530px;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 175%;
+
+      p {
+        margin: 0;
+
+        &:not(:last-child) {
+          margin-bottom: 40px;
+
+          @include mobile {
+            margin-bottom: 20px;
+          }
+        }
+      }
+
+      @include small-tablet {
+        font-size: 16px;
+      }
+
+      @include mobile {
+        font-size: 14px;
+      }
+    }
+
+    @include tablet {
+      gap: 30px;
+    }
+
+    @include mobile {
+      display: block;
+    }
+  }
+
+  @include mobile {
+    margin-bottom: 120px;
+  }
+}
