@@ -1,0 +1,97 @@
+.personal {
+  margin-bottom: 150px;
+
+  &__header {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 50px;
+
+    @include small-tablet {
+      display: block;
+    }
+
+    @include mobile {
+      margin-bottom: 35px;
+    }
+  }
+
+  &__descr {
+    font-size: 20px;
+    line-height: 150%;
+
+    @include mobile {
+      font-size: 14px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-right: 16px;
+
+    @include small-tablet {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+
+    @include mobile {
+      text-align: left;
+    }
+  }
+
+  .personal__slider-button.swiper-button-disabled {
+    background-color: transparent;
+    cursor: default;
+
+    svg {
+      fill: $color-main-green;
+    }
+  }
+
+  &__slider {
+    &-nav {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 50px;
+      gap: 30px;
+
+      @include mobile {
+        display: none;
+      }
+    }
+
+    &-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #65a16a;
+      border-radius: 50%;
+      width: 64px;
+      height: 64px;
+      background-color: $color-main-green;
+      cursor: pointer;
+
+      svg {
+        fill: #fff;
+      }
+
+      &:hover {
+        background-color: $color-button-hover;
+      }
+
+      /* stylelint-disable-next-line order/order */
+      &:active,
+      &:focus {
+        background-color: #abcdae;
+      }
+    }
+  }
+
+  &__title,
+  &__descr {
+    flex-basis: 50%;
+  }
+
+  @include mobile {
+    margin-bottom: 120px;
+  }
+}
