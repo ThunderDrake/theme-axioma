@@ -16,6 +16,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_scroll_top__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/scroll-top */ "./assets/src/js/components/scroll-top.js");
 /* harmony import */ var _components_scroll_top__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_components_scroll_top__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _components_personal_slider__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/personal-slider */ "./assets/src/js/components/personal-slider.js");
+/* harmony import */ var _components_review_slider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/review-slider */ "./assets/src/js/components/review-slider.js");
+
 
 
 
@@ -237,6 +239,40 @@ if (personalSlider) {
     spaceBetween: 30,
     slidesOffsetBefore: Math.max(15, (document.documentElement.clientWidth - 1110) / 2),
     slidesOffsetAfter: Math.max(15, (document.documentElement.clientWidth - 1110) / 2)
+  });
+}
+
+/***/ }),
+
+/***/ "./assets/src/js/components/review-slider.js":
+/*!***************************************************!*\
+  !*** ./assets/src/js/components/review-slider.js ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var swiper_bundle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper/bundle */ "./node_modules/swiper/swiper-bundle.esm.js");
+
+const reviewsSlider = document?.querySelector('.reviews__slider');
+if (reviewsSlider) {
+  const swiper = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('.reviews__slider', {
+    navigation: {
+      nextEl: '.reviews__slider-button--next',
+      prevEl: '.reviews__slider-button--prev'
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        autoHeight: true
+      },
+      769: {
+        slidesPerView: 'auto',
+        slidesOffsetBefore: Math.max(15, (document.documentElement.clientWidth - 1110) / 2),
+        slidesOffsetAfter: Math.max(15, (document.documentElement.clientWidth - 1110) / 2)
+      }
+    },
+    spaceBetween: 30
   });
 }
 
