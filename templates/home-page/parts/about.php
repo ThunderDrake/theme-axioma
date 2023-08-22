@@ -1,4 +1,4 @@
-<section class="about">
+<section class="about" id="about">
   <div class="about__container container">
     <div class="about__content-wrapper">
       <img loading="lazy" src="<?= ct()->get_static_url() ?>/img/logo.svg" class="about__logo" width="640" height="190" alt="Axioma logo">

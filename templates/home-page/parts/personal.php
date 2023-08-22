@@ -1,4 +1,4 @@
-<section class="personal">
+<section class="personal" id="personal">
   <div class="personal__container">
     <div class="personal__header container">
       <h2 class="personal__title section-title">Наши врачи</h2>

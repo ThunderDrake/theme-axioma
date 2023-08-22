@@ -4,7 +4,7 @@
 */
 ?>
 
-<section class="services">
+<section class="services" id="services">
   <div class="services__container container">
     <h2 class="services__title section-title">Наши услуги:</h2>
     <ul class="services__list service-list list-reset">

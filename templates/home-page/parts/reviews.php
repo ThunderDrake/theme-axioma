@@ -1,4 +1,4 @@
-<section class="reviews">
+<section class="reviews" id="reviews">
   <div class="reviews__container">
     <div class="reviews__header container">
       <h2 class="reviews__title section-title">Отзывы</h2>

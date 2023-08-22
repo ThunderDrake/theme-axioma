@@ -50,16 +50,16 @@
       <nav class="header__nav nav nav--main" data-menu>
         <ul class="nav__list list-reset">
           <li class="nav__item">
-            <a class="nav__link" href="/">Услуги</a>
+            <a class="nav__link" href="#services" data-menu-item>Услуги</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="/">Врачи</a>
+            <a class="nav__link" href="#personal" data-menu-item>Врачи</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="/">О нас</a>
+            <a class="nav__link" href="#about" data-menu-item>О нас</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="/">Отзывы</a>
+            <a class="nav__link" href="#reviews" data-menu-item>Отзывы</a>
           </li>
         </ul>
         <a href="tel:8800553535" class="button header__button-call header__button-call--mobile button--stroke">8(800) 55 35 35</a>

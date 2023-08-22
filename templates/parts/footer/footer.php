@@ -22,16 +22,16 @@
       <nav class="footer__nav nav nav--second">
         <ul class="nav__list list-reset">
           <li class="nav__item">
-            <a class="nav__link" href="/">Услуги</a>
+            <a class="nav__link" href="#services">Услуги</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="/">Врачи</a>
+            <a class="nav__link" href="#personal">Врачи</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="/">О нас</a>
+            <a class="nav__link" href="#about">О нас</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="/">Отзывы</a>
+            <a class="nav__link" href="#reviews">Отзывы</a>
           </li>
         </ul>
       </nav>
