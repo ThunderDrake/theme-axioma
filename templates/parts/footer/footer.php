@@ -56,7 +56,9 @@
     </div>
   </div>
 </footer>
-
+<?php
+ct()->template('parts/modals/callback-form.php');
+?>
 <?php wp_footer() ?>
 </div>
 </body>

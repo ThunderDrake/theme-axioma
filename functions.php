@@ -30,3 +30,4 @@ new ACF();
 require __DIR__ . '/functions/register-common-taxonomies.php';
 require __DIR__ . '/functions/other/module.php';
 require __DIR__ . '/functions/home-page/module.php';
+require __DIR__ . '/functions/forms/module.php';

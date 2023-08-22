@@ -1,4 +1,5 @@
 const btnToTop = document.querySelector('[data-btn-to-top]');
+const scrollTo = document.querySelector('[scroll-to]');
 
 const onClickBtnToTop = (e) => {
   e.preventDefault();
@@ -18,3 +19,17 @@ const initScrollToTop = () => {
 };
 
 initScrollToTop();
+
+const initScrollToBlock = () => {
+  if (!scrollTo) {
+    return;
+  }
+
+  scrollTo.addEventListener('click', ()=>{
+    const element = document.querySelector('.services');
+
+    element.scrollIntoView()
+  });
+};
+
+initScrollToBlock();

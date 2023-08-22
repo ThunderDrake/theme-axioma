@@ -10,7 +10,7 @@
     <ul class="services__list service-list list-reset">
       <li class="service-list__item service">
         <div class="service__name">Прием врача-гинеколога-эндокринолога</div>
-        <button class="btn-reset button service__button" data-graph-path="callback">Записаться</button>
+        <button class="btn-reset button service__button" data-graph-path="callback" data-modal-service="Прием врача-гинеколога-эндокринолога">Записаться</button>
       </li>
       <li class="service-list__item service">
         <div class="service__name">Прием врача-гинеколога-эндокринолога</div>

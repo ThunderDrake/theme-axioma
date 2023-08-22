@@ -1,9 +1,9 @@
 import { validateForms } from '../functions/validate-forms';
 import modal from "./modals.js";
 
-const mainFormRules = [
+const callbackFormRules = [
   {
-    ruleSelector: '.main-form .form__input--name',
+    ruleSelector: '.callback-form .form__input--name',
     rules: [
       {
         rule: 'minLength',
@@ -18,7 +18,7 @@ const mainFormRules = [
     ]
   },
   {
-    ruleSelector: '.main-form .form__input--phone',
+    ruleSelector: '.callback-form .form__input--phone',
     tel: true,
     telError: 'Введите корректный телефон',
     rules: [
@@ -30,7 +30,7 @@ const mainFormRules = [
     ]
   },
   {
-    ruleSelector: '.custom-checkbox__field',
+    ruleSelector: '.callback-form .custom-checkbox__field',
     rules: [
       {
         rule: 'required',
@@ -42,6 +42,8 @@ const mainFormRules = [
 ];
 
 const afterForm = () => {
+  modal.close();
+
   modal.open('thanks');
 
   setTimeout(()=>{
@@ -49,4 +51,4 @@ const afterForm = () => {
   }, 7000)
 };
 
-validateForms('.main-form', mainFormRules, form_object.url, form_object.nonce, 'form_action', afterForm);
+validateForms('.callback-form', callbackFormRules, form_object.url, form_object.nonce, 'form_action', afterForm);

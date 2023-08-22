@@ -14,7 +14,7 @@
       <h2 class="hero__title">30% скидка на анализы каждый <span>вторник, четверг и&nbsp;воскресенье</span></h2>
       <div class="hero__descr">Скидка действует на все анализы кроме общего анализа крови, общего анализа мочи, Антитела к коронавирусу SARS CoV2 Ig G, М (количественные и качественные).</div>
       <div class="hero__descr hero__descr--green-text">Забор крови оплачивается отдельно. Имеются противопоказания, необходима консультация врача.</div>
-      <button class="btn-reset button hero__button" data-graph-path="callback_modal">Смотреть прайс</button>
+      <button class="btn-reset button hero__button" scroll-to="services">Смотреть прайс</button>
     </div>
   </div>
 </section>

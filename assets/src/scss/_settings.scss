@@ -115,3 +115,7 @@ a {
 .d-mobile {
   @include d-mobile (768px);
 }
+
+.disable-scroll {
+  height: auto !important;
+}
