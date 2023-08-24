@@ -1,3 +1,14 @@
+<?php
+/**
+ * Шаблон раздела отзывов на главной
+ */
+
+$reviews = get_review_list();
+
+if(!$reviews) {
+  return;
+}
+?>
 <section class="reviews" id="reviews">
   <div class="reviews__container">
     <div class="reviews__header container">
@@ -20,32 +31,21 @@
     </div>
     <div class="swiper reviews__slider">
       <div class="swiper-wrapper">
-
+        
+        <?php foreach($reviews as $review): ?>
         <div class="swiper-slide review">
           <div class="review__wrapper">
             <div class="review__header">
               <div class="review__photo">
-                <img loading="lazy" src="<?= ct()->get_static_url(); ?>/img/review/review-img.png" class="review__img" width="40" height="40" alt="Имя">
+                <img loading="lazy" src="<?= get_review_image_src($review) ?>" class="review__img" width="40" height="40" alt="Имя">
               </div>
-              <div class="review__title">Марина, 49</div>
+              <div class="review__title"><?= get_review_title($review); ?></div>
             </div>
-            <div class="review__good">Понравилось: oтношение к пациенту.</div>
-            <div class="review__descr">Я очень благородна этому врачу, Козадеровой Марине Алексеевне, за её усердную работу и заботу о моем и моей дочери, здоровье. Я чувствую себя гораздо лучше после посещения клиники и настоятельно рекомендую её своим друзьям и семье. Если вы ищите квалифицированного и доброго врача, то вы не ошибетесь, обратившись к этому специалисту!</div>
+            <div class="review__good"><?= get_review_like($review); ?></div>
+            <div class="review__descr"><?= get_review_text($review); ?></div>
           </div>
         </div>
-
-        <div class="swiper-slide review">
-          <div class="review__wrapper">
-            <div class="review__header">
-              <div class="review__photo review__photo--empty">
-                <img loading="lazy" src="<?= ct()->get_static_url(); ?>/img/review/review-empty.svg" class="review__img" width="40" height="40" alt="Имя">
-              </div>
-              <div class="review__title">Марина, 49</div>
-            </div>
-            <div class="review__good">Понравилось: oтношение к пациенту.</div>
-            <div class="review__descr">Я очень благородна этому врачу, Козадеровой Марине Алексеевне, за её усердную работу и заботу о моем и моей дочери, здоровье. Я чувствую себя гораздо лучше после посещения клиники и настоятельно рекомендую её своим друзьям и семье. Если вы ищите квалифицированного и доброго врача, то вы не ошибетесь, обратившись к этому специалисту!</div>
-          </div>
-        </div>
+        <?php endforeach; ?>
 
       </div>
     </div>
