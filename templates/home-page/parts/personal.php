@@ -20,18 +20,17 @@ if(!$personal_list) {
       <div class="swiper-wrapper">
 
         <?php foreach($personal_list as $post): ?>
-        <?php
-        $image_id = get_personal_image_id($post);
-        error_log( print_r( $image_id, true ) );
-        ?>
         <div class="swiper-slide person">
           <div class="person__wrapper">
             <div class="person__img-wrapper">
-              <img loading="lazy" src="<?= kama_thumb_src("w=225&h=300&attach_id=$image_id&q=95") ?>" class="person__img"
+              <img loading="lazy" src="<?= get_personal_image_src(); ?>" class="person__img"
                 width="225" height="300" alt="<?= get_personal_title($post); ?>">
             </div>
             <div class="person__name"><?= get_personal_title($post); ?></div>
-            <div class="person__description"><?= get_personal_descr($post); ?></div>
+
+            <?php if($descr = get_personal_descr($post)): ?>
+              <div class="person__description"><?= $descr ?></div>
+            <?php endif; ?>
             <button class="btn-reset button--stroke person__button" data-graph-path="callback" data-modal-service="Запись к врачу: <?= get_personal_title(); ?>">Записаться</button>
           </div>
         </div>

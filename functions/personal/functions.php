@@ -30,8 +30,11 @@ function get_personal_title( $post = null ) {
  * @param int|WP_Post|null $post
  * @return void
  */
-function get_personal_image_id( $post = null ) {
-  return get_field('personal_image_id', $post);
+function get_personal_image_src( $post = null ) {
+  $image_id = get_field('personal_image_id', $post);
+  $stub_url = ct()->get_static_url() . "/img/personal/personal-stub.png";
+
+   return kama_thumb_src("w=225&h=300&attach_id=$image_id&stub_url=$stub_url");
 }
 
 /**

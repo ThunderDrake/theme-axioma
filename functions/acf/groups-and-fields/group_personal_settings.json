@@ -9,7 +9,7 @@
             "aria-label": "",
             "type": "image",
             "instructions": "Добавьте фото сотрудника. Можно добавлять только файлы .png c прозрачным фоном",
-            "required": 1,
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "40",
@@ -34,7 +34,7 @@
             "aria-label": "",
             "type": "textarea",
             "instructions": "Укажите описание сотрудника. Здесь могут быть квалификации, возраст и иная информация",
-            "required": 1,
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "60",
@@ -66,5 +66,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1692876945
+    "modified": 1692882639
 }
