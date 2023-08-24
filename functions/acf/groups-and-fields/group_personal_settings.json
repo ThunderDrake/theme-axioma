@@ -1,0 +1,70 @@
+{
+    "key": "group_personal_settings",
+    "title": "Настройки сотрудников",
+    "fields": [
+        {
+            "key": "field_64e73fed14dda",
+            "label": "Фото сотрудника",
+            "name": "personal_image_id",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Добавьте фото сотрудника. Можно добавлять только файлы .png c прозрачным фоном",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "40",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ".png",
+            "preview_size": "thumbnail"
+        },
+        {
+            "key": "field_64e7406214ddb",
+            "label": "Описание сотрудника",
+            "name": "personal_description",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Укажите описание сотрудника. Здесь могут быть квалификации, возраст и иная информация",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "60",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "rows": 4,
+            "placeholder": "",
+            "new_lines": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "personal"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1692876945
+}

@@ -1,3 +1,14 @@
+<?php
+/**
+ * Раздел сотрудников на главной
+ */
+global $post;
+$personal_list = get_personal_list();
+
+if(!$personal_list) {
+  return;
+}
+?>
 <section class="personal" id="personal">
   <div class="personal__container">
     <div class="personal__header container">
@@ -8,114 +19,23 @@
     <div class="swiper personal__slider">
       <div class="swiper-wrapper">
 
+        <?php foreach($personal_list as $post): ?>
+        <?php
+        $image_id = get_personal_image_id($post);
+        error_log( print_r( $image_id, true ) );
+        ?>
         <div class="swiper-slide person">
           <div class="person__wrapper">
             <div class="person__img-wrapper">
-              <img loading="lazy" src="<?= ct()->get_static_url(); ?>/img/personal/person-img.png" class="person__img"
-                width="225" height="300" alt="Имя">
+              <img loading="lazy" src="<?= kama_thumb_src("w=225&h=300&attach_id=$image_id&q=95") ?>" class="person__img"
+                width="225" height="300" alt="<?= get_personal_title($post); ?>">
             </div>
-            <div class="person__name">Козадерова Марина Алексеевна</div>
-            <div class="person__description">Врач-акушер-гинеколог, врач гинеколог-эндокринолог, врач УЗИ. Высшая
-              категория, стаж 36 лет</div>
-            <button class="btn-reset button--stroke person__button" data-graph-path="callback">Записаться</button>
+            <div class="person__name"><?= get_personal_title($post); ?></div>
+            <div class="person__description"><?= get_personal_descr($post); ?></div>
+            <button class="btn-reset button--stroke person__button" data-graph-path="callback" data-modal-service="Запись к врачу: <?= get_personal_title(); ?>">Записаться</button>
           </div>
         </div>
-        <div class="swiper-slide person">
-          <div class="person__wrapper">
-            <div class="person__img-wrapper">
-              <img loading="lazy" src="<?= ct()->get_static_url(); ?>/img/personal/person-img.png" class="person__img"
-                width="225" height="300" alt="Имя">
-            </div>
-            <div class="person__name">Козадерова Марина Алексеевна</div>
-            <div class="person__description">Врач-акушер-гинеколог, врач гинеколог-эндокринолог, врач УЗИ. Высшая
-              категория, стаж 36 лет</div>
-            <button class="btn-reset button--stroke person__button" data-graph-path="callback">Записаться</button>
-          </div>
-        </div>
-        <div class="swiper-slide person">
-          <div class="person__wrapper">
-            <div class="person__img-wrapper">
-              <img loading="lazy" src="<?= ct()->get_static_url(); ?>/img/personal/person-img.png" class="person__img"
-                width="225" height="300" alt="Имя">
-            </div>
-            <div class="person__name">Козадерова Марина Алексеевна</div>
-            <div class="person__description">Врач-акушер-гинеколог, врач гинеколог-эндокринолог, врач УЗИ. Высшая
-              категория, стаж 36 лет</div>
-            <button class="btn-reset button--stroke person__button" data-graph-path="callback">Записаться</button>
-          </div>
-        </div>
-        <div class="swiper-slide person">
-          <div class="person__wrapper">
-            <div class="person__img-wrapper">
-              <img loading="lazy" src="<?= ct()->get_static_url(); ?>/img/personal/person-img.png" class="person__img"
-                width="225" height="300" alt="Имя">
-            </div>
-            <div class="person__name">Козадерова Марина Алексеевна</div>
-            <div class="person__description">Врач-акушер-гинеколог, врач гинеколог-эндокринолог, врач УЗИ. Высшая
-              категория, стаж 36 лет</div>
-            <button class="btn-reset button--stroke person__button" data-graph-path="callback">Записаться</button>
-          </div>
-        </div>
-        <div class="swiper-slide person">
-          <div class="person__wrapper">
-            <div class="person__img-wrapper">
-              <img loading="lazy" src="<?= ct()->get_static_url(); ?>/img/personal/person-img.png" class="person__img"
-                width="225" height="300" alt="Имя">
-            </div>
-            <div class="person__name">Козадерова Марина Алексеевна</div>
-            <div class="person__description">Врач-акушер-гинеколог, врач гинеколог-эндокринолог, врач УЗИ. Высшая
-              категория, стаж 36 лет</div>
-            <button class="btn-reset button--stroke person__button" data-graph-path="callback">Записаться</button>
-          </div>
-        </div>
-        <div class="swiper-slide person">
-          <div class="person__wrapper">
-            <div class="person__img-wrapper">
-              <img loading="lazy" src="<?= ct()->get_static_url(); ?>/img/personal/person-img.png" class="person__img"
-                width="225" height="300" alt="Имя">
-            </div>
-            <div class="person__name">Козадерова Марина Алексеевна</div>
-            <div class="person__description">Врач-акушер-гинеколог, врач гинеколог-эндокринолог, врач УЗИ. Высшая
-              категория, стаж 36 лет</div>
-            <button class="btn-reset button--stroke person__button" data-graph-path="callback">Записаться</button>
-          </div>
-        </div>
-        <div class="swiper-slide person">
-          <div class="person__wrapper">
-            <div class="person__img-wrapper">
-              <img loading="lazy" src="<?= ct()->get_static_url(); ?>/img/personal/person-img.png" class="person__img"
-                width="225" height="300" alt="Имя">
-            </div>
-            <div class="person__name">Козадерова Марина Алексеевна</div>
-            <div class="person__description">Врач-акушер-гинеколог, врач гинеколог-эндокринолог, врач УЗИ. Высшая
-              категория, стаж 36 лет</div>
-            <button class="btn-reset button--stroke person__button" data-graph-path="callback">Записаться</button>
-          </div>
-        </div>
-        <div class="swiper-slide person">
-          <div class="person__wrapper">
-            <div class="person__img-wrapper">
-              <img loading="lazy" src="<?= ct()->get_static_url(); ?>/img/personal/person-img.png" class="person__img"
-                width="225" height="300" alt="Имя">
-            </div>
-            <div class="person__name">Козадерова Марина Алексеевна</div>
-            <div class="person__description">Врач-акушер-гинеколог, врач гинеколог-эндокринолог, врач УЗИ. Высшая
-              категория, стаж 36 лет</div>
-            <button class="btn-reset button--stroke person__button" data-graph-path="callback">Записаться</button>
-          </div>
-        </div>
-        <div class="swiper-slide person">
-          <div class="person__wrapper">
-            <div class="person__img-wrapper">
-              <img loading="lazy" src="<?= ct()->get_static_url(); ?>/img/personal/person-img.png" class="person__img"
-                width="225" height="300" alt="Имя">
-            </div>
-            <div class="person__name">Козадерова Марина Алексеевна</div>
-            <div class="person__description">Врач-акушер-гинеколог, врач гинеколог-эндокринолог, врач УЗИ. Высшая
-              категория, стаж 36 лет</div>
-            <button class="btn-reset button--stroke person__button" data-graph-path="callback">Записаться</button>
-          </div>
-        </div>
+        <?php endforeach; ?>
 
       </div>
       <div class="personal__slider-nav container">
