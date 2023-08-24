@@ -11,9 +11,14 @@
 
     <h1 class="visually-hidden">Аксиома Здоровья - медицинский центр в Липецке, скидки на анализы, записаться на приём к врачу в Липецке</h1>
     <div class="hero__text">
-      <h2 class="hero__title">30% скидка на анализы каждый <span>вторник, четверг и&nbsp;воскресенье</span></h2>
-      <div class="hero__descr">Скидка действует на все анализы кроме общего анализа крови, общего анализа мочи, Антитела к коронавирусу SARS CoV2 Ig G, М (количественные и качественные).</div>
-      <div class="hero__descr hero__descr--green-text">Забор крови оплачивается отдельно. Имеются противопоказания, необходима консультация врача.</div>
+      <h2 class="hero__title"><?= get_main_title(); ?></h2>
+      <?php if($first_subtitle = get_main_first_subtitle()): ?>
+        <div class="hero__descr"><?= $first_subtitle ?></div>
+      <?php endif; ?>
+
+      <?php if($second_subtitle = get_main_second_subtitle()): ?>
+        <div class="hero__descr hero__descr--green-text"><?= $second_subtitle ?></div>
+      <?php endif; ?>
       <button class="btn-reset button hero__button" scroll-to="services">Смотреть прайс</button>
     </div>
   </div>

@@ -1,0 +1,179 @@
+{
+    "key": "group_main_settings",
+    "title": "Управление сайтом",
+    "fields": [
+        {
+            "key": "field_64e7670577249",
+            "label": "Общая и контактная информация",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_64e7673a7724a",
+            "label": "Физический адрес клиники",
+            "name": "main_address",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Введите адрес расположения клиники",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_64e767777724b",
+            "label": "Режим работы",
+            "name": "main_work_time",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Введите время работы клиники текстом. Вводите в формате \"ЧЧ:ММ – ЧЧ:ММ\"",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "07:30 – 19:30",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_64e767c17724c",
+            "label": "Контактный телефон для связи",
+            "name": "main_phone",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Введите телефон для связи в формате +7 ___ - ___ - __ - __",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_64e768417724d",
+            "label": "Настройки первого экрана",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_64e768fb7724e",
+            "label": "Заголовок",
+            "name": "main_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Введите заголовок первого экрана. Для выделения текста цветом - оберните текст в тег &lsaquo;span&rsaquo;",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_64e769597724f",
+            "label": "Подзаголовок №1",
+            "name": "main_subtitle_first",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Введите первый заголовок черного цвета",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "rows": 3,
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_64e7698577250",
+            "label": "Подзаголовок №2",
+            "name": "main_subtitle_second",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Введите второй по порядку подзаголовок зеленого цвета",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "rows": 3,
+            "placeholder": "",
+            "new_lines": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "theme-general-settings"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1692888138
+}

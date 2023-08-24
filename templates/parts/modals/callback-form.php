@@ -21,7 +21,7 @@
         <label class="custom-checkbox form__checkbox">
           <input type="checkbox" class="custom-checkbox__field">
           <span class="custom-checkbox__content">Нажимая галочку «Согласен» Вы подтверждаете свое согласие на обработку
-            <a href="/">персональных данных</a></span>
+            <a href="<?= get_privacy_policy_url() ?>">персональных данных</a></span>
         </label>
         <input type="hidden" name="client_service" class="input-reset form__input form__input--service" value="">
       </form>

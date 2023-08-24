@@ -35,14 +35,14 @@
           <svg class="header__info-icon" width="16" height="16">
             <use xlink:href="<?= ct()->get_static_url() ?>/img/sprite.svg#location-icon"></use>
           </svg>
-          <span class="header__info-text">Липецк, ул. И.В. Свиридова, 20, корп. 4</span>
+          <span class="header__info-text"><?= Contacts::get_address() ?></span>
         </div>
 
         <div class="header__info-item">
           <svg class="header__info-icon" width="16" height="16">
             <use xlink:href="<?= ct()->get_static_url() ?>/img/sprite.svg#time-icon"></use>
           </svg>
-          <span class="header__info-text">Режим работы: 07:30 – 19:30</span>
+          <span class="header__info-text">Режим работы: <?= Contacts::get_work_time() ?></span>
         </div>
 
       </div>
@@ -62,10 +62,10 @@
             <a class="nav__link" href="#reviews" data-menu-item>Отзывы</a>
           </li>
         </ul>
-        <a href="tel:8800553535" class="button header__button-call header__button-call--mobile button--stroke">8(800) 55 35 35</a>
+        <a href="tel:<?= Contacts::get_main_phone()['formated'] ?>" class="button header__button-call header__button-call--mobile button--stroke"><?= Contacts::get_main_phone()['raw'] ?></a>
       </nav>
 
-      <a href="tel:8800553535" class="button header__button-call button--stroke">8(800) 55 35 35</a>
+      <a href="tel:<?= Contacts::get_main_phone()['formated'] ?>" class="button header__button-call button--stroke"><?= Contacts::get_main_phone()['raw'] ?></a>
 
       <button class="burger header__burger btn-reset" aria-label="Открыть меню" aria-expanded="false"  data-burger>
         <span class="burger__line"></span>

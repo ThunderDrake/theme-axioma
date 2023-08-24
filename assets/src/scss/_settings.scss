@@ -126,3 +126,8 @@ footer {
 .disable-scroll {
   height: auto !important;
 }
+
+.default-page {
+  padding-top: var(--header-height);
+  padding-bottom: 70px;
+}

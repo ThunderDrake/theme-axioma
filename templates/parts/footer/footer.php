@@ -10,13 +10,13 @@
           <svg class="footer__info-icon" width="16" height="16">
             <use xlink:href="<?= ct()->get_static_url() ?>/img/sprite.svg#location-icon"></use>
           </svg>
-          <span class="footer__info-text">Липецк, ул. И.В. Свиридова, 20, корп. 4</span>
+          <span class="footer__info-text"><?= Contacts::get_address() ?></span>
         </div>
         <div class="footer__info-item">
           <svg class="footer__info-icon" width="16" height="16">
             <use xlink:href="<?= ct()->get_static_url() ?>/img/sprite.svg#time-icon"></use>
           </svg>
-          <span class="footer__info-text">Режим работы: 07:30 – 19:30</span>
+          <span class="footer__info-text">Режим работы: <?= Contacts::get_work_time() ?></span>
         </div>
       </div>
       <nav class="footer__nav nav nav--second">
@@ -35,13 +35,13 @@
           </li>
         </ul>
       </nav>
-      <a href="tel:8800553535" class="button footer__button-call button--stroke">8(800) 55 35 35</a>
+      <a href="tel:<?= Contacts::get_main_phone()['formated'] ?>" class="button footer__button-call button--stroke"><?= Contacts::get_main_phone()['raw'] ?></a>
       <button class=" btn-reset footer__scroll-top" data-btn-to-top>Наверх</button>
     </div>
 
     <div class="footer__bottom">
       <div class="footer__copyright">© Все права защищены <?= date('Y') ?></div>
-      <a href="#" class="footer__policy">Политика конфиденциальности</a>
+      <a href="<?= get_privacy_policy_url() ?>" class="footer__policy">Политика конфиденциальности</a>
       <div class="footer__authors">
         <div class="footer__authors-item">
           <span>designed</span>

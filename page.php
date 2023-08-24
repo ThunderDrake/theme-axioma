@@ -5,14 +5,14 @@
 ct()->header();
 ?>
     <main>
-        <section class="school-intro submenu-mobile-container" id="intro">
-            <div class="page-intro container">
-                <h1 class="page-intro__title title title--h1">
-					<?php the_title() ?>
+        <section class="default-page">
+            <div class="default-page__container container">
+                <h1 class="default-page__title">
+					          <?php the_title() ?>
                 </h1>
 
-                <div class="page-intro__text">
-					<?php the_content() ?>
+                <div class="default-page__text">
+                  <?php the_content() ?>
                 </div>
             </div>
         </section>
