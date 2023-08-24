@@ -25,7 +25,7 @@ add_action( 'init', function () {
 		'hierarchical'     => false,
 		'menu_position'    => 7,
 		'menu_icon'        => 'dashicons-welcome-write-blog',
-		'supports'         => [ 'title', 'editor' ],
+		'supports'         => [ 'title' ],
 		'posts_per_page'   => -1,
 		'show_in_rest'     => false,
 		'show_ui'          => true,
