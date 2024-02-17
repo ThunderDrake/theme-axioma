@@ -15,17 +15,13 @@ function ajax_action_callback() {
 	if ( ! wp_verify_nonce( $_POST['nonce'], 'form-nonce' ) ) {
 		wp_die( 'Данные отправлены с левого адреса' );
 	}
-
-	// // Проверяем на спам. Если скрытое поле заполнено или снят чек, то блокируем отправку
-	// if ( false === $_POST['art_anticheck'] || ! empty( $_POST['art_submitted'] ) ) {
-	// 	wp_die( 'Пошел нахрен, мальчик!(c)' );
-	// }
-
-  if ( empty( $_POST['question'] ) || ! isset( $_POST['question'] ) ) {
-		$err_message['question'] = 'Пожалуйста, введите ваше имя.';
-	} else {
-		$form_question = sanitize_text_field( $_POST['question'] );
-	}
+  if($_POST['question']) {
+    if ( empty( $_POST['question'] ) || ! isset( $_POST['question'] ) ) {
+      $err_message['question'] = 'Пожалуйста, введите ваш вопрос.';
+    } else {
+      $form_question = sanitize_text_field( $_POST['question'] );
+    }
+  }
 
 	if ( empty( $_POST['client_name'] ) || ! isset( $_POST['client_name'] ) ) {
 		$err_message['client_name'] = 'Пожалуйста, введите ваше имя.';
@@ -38,12 +34,13 @@ function ajax_action_callback() {
 	} else {
 		$form_phone = sanitize_text_field( $_POST['client_phone'] );
 	}
-
-	if ( empty( $_POST['client_service'] ) || ! isset( $_POST['client_service'] ) ) {
-		$err_message['client_service'] = 'Пожалуйста, укажите услугу';
-	} else {
-		$form_service = sanitize_text_field( $_POST['client_service'] );
-	}
+  if($_POST['client_service']){
+    if ( empty( $_POST['client_service'] ) || ! isset( $_POST['client_service'] ) ) {
+      $err_message['client_service'] = 'Пожалуйста, укажите услугу';
+    } else {
+      $form_service = sanitize_text_field( $_POST['client_service'] );
+    }
+  }
 	// Проверяем массив ошибок, если не пустой, то передаем сообщение. Иначе отправляем письмо
 	if ( $err_message ) {
 
@@ -52,16 +49,12 @@ function ajax_action_callback() {
 	} else {
 
 		// Указываем адресата
-		$email_to = '';
-
-		// Если адресат не указан, то берем данные из настроек сайта
-		if ( ! $email_to ) {
-			$email_to = get_option( 'admin_email' );
-		}
-    if ( empty( $_POST['client_name'] ) || ! isset( $_POST['client_name'] ) ) {
+		$email_to = 'drake9100@mail.ru';
+    if ( empty( $_POST['question'] ) || ! isset( $_POST['question'] ) ) {
       $body    = "Имя: $form_name \nТелефон для связи: $form_phone \n\nПосетитель оставил заявку на услугу: $form_service";
     } else{
-      $body    = "Имя: $form_name \nТелефон для связи: $form_phone \n\nПосетитель оставил заявку на услугу: $form_service Вопрос: $form_question";
+      $body    = "Имя: $form_name \nТелефон для связи: $form_phone
+      \n\n Вопрос: $form_question";
     }
 
 		$headers = 'From: ' . $form_name . ' <' . $email_to . '>' . "\r\n" . 'Reply-To: ' . $email_to;
