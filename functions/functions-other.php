@@ -519,7 +519,3 @@ function get_param_strings_for_filter( $key ) {
 function get_param_for_filter( $key, $default = '' ) {
 	return $_GET[ $key ] ?? $default;
 }
-
-if(is_404()) {
-  error_log( print_r( 123, true ) );
-}

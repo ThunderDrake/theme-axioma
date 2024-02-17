@@ -21,6 +21,12 @@ function ajax_action_callback() {
 	// 	wp_die( 'Пошел нахрен, мальчик!(c)' );
 	// }
 
+  if ( empty( $_POST['question'] ) || ! isset( $_POST['question'] ) ) {
+		$err_message['question'] = 'Пожалуйста, введите ваше имя.';
+	} else {
+		$form_question = sanitize_text_field( $_POST['question'] );
+	}
+
 	if ( empty( $_POST['client_name'] ) || ! isset( $_POST['client_name'] ) ) {
 		$err_message['client_name'] = 'Пожалуйста, введите ваше имя.';
 	} else {
@@ -52,8 +58,12 @@ function ajax_action_callback() {
 		if ( ! $email_to ) {
 			$email_to = get_option( 'admin_email' );
 		}
+    if ( empty( $_POST['client_name'] ) || ! isset( $_POST['client_name'] ) ) {
+      $body    = "Имя: $form_name \nТелефон для связи: $form_phone \n\nПосетитель оставил заявку на услугу: $form_service";
+    } else{
+      $body    = "Имя: $form_name \nТелефон для связи: $form_phone \n\nПосетитель оставил заявку на услугу: $form_service Вопрос: $form_question";
+    }
 
-		$body    = "Имя: $form_name \nТелефон для связи: $form_phone \n\nПосетитель оставил заявку на услугу: $form_service";
 		$headers = 'From: ' . $form_name . ' <' . $email_to . '>' . "\r\n" . 'Reply-To: ' . $email_to;
 
 		// Отправляем письмо

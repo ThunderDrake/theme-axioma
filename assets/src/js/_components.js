@@ -6,3 +6,4 @@ import "./components/personal-slider";
 import "./components/review-slider";
 import "./components/modals";
 import "./components/callback-form-validation";
+import "./components/expert-form";

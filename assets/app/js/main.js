@@ -19,6 +19,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_review_slider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/review-slider */ "./assets/src/js/components/review-slider.js");
 /* harmony import */ var _components_modals__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/modals */ "./assets/src/js/components/modals.js");
 /* harmony import */ var _components_callback_form_validation__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/callback-form-validation */ "./assets/src/js/components/callback-form-validation.js");
+/* harmony import */ var _components_expert_form__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/expert-form */ "./assets/src/js/components/expert-form.js");
+
 
 
 
@@ -228,6 +230,64 @@ const afterForm = () => {
 
 /***/ }),
 
+/***/ "./assets/src/js/components/expert-form.js":
+/*!*************************************************!*\
+  !*** ./assets/src/js/components/expert-form.js ***!
+  \*************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _functions_validate_forms__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../functions/validate-forms */ "./assets/src/js/functions/validate-forms.js");
+/* harmony import */ var _modals_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modals.js */ "./assets/src/js/components/modals.js");
+
+
+const expertFormRules = [{
+  ruleSelector: '.expert-form .form__input--name',
+  rules: [{
+    rule: 'minLength',
+    value: 3,
+    errorMessage: 'Слишком короткое имя'
+  }, {
+    rule: 'required',
+    value: true,
+    errorMessage: 'Заполните имя!'
+  }]
+}, {
+  ruleSelector: '.expert-form .form__input--phone',
+  tel: true,
+  telError: 'Введите корректный телефон',
+  rules: [{
+    rule: 'required',
+    value: true,
+    errorMessage: 'Заполните телефон!'
+  }]
+}, {
+  ruleSelector: '.expert-form .custom-checkbox__field',
+  rules: [{
+    rule: 'required',
+    value: true,
+    errorMessage: 'Согласитесь с обработкой данных!'
+  }]
+}, {
+  ruleSelector: '.expert-form .form__input--question',
+  rules: [{
+    rule: 'required',
+    value: true
+  }]
+}];
+const afterForm = () => {
+  _modals_js__WEBPACK_IMPORTED_MODULE_1__["default"].open('thanks');
+  setTimeout(() => {
+    _modals_js__WEBPACK_IMPORTED_MODULE_1__["default"].close();
+  }, 7000);
+};
+if (document.querySelector(".expert-form")) {
+  (0,_functions_validate_forms__WEBPACK_IMPORTED_MODULE_0__.validateForms)('.expert-form', expertFormRules, form_object.url, form_object.nonce, 'form_action', afterForm);
+}
+
+/***/ }),
+
 /***/ "./assets/src/js/components/main-form-validation.js":
 /*!**********************************************************!*\
   !*** ./assets/src/js/components/main-form-validation.js ***!
@@ -274,7 +334,9 @@ const afterForm = () => {
     _modals_js__WEBPACK_IMPORTED_MODULE_1__["default"].close();
   }, 7000);
 };
-(0,_functions_validate_forms__WEBPACK_IMPORTED_MODULE_0__.validateForms)('.main-form', mainFormRules, form_object.url, form_object.nonce, 'form_action', afterForm);
+if (document.querySelector(".main-form")) {
+  (0,_functions_validate_forms__WEBPACK_IMPORTED_MODULE_0__.validateForms)('.main-form', mainFormRules, form_object.url, form_object.nonce, 'form_action', afterForm);
+}
 
 /***/ }),
 

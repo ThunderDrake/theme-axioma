@@ -1,9 +1,9 @@
 import { validateForms } from '../functions/validate-forms';
 import modal from "./modals.js";
 
-const mainFormRules = [
+const expertFormRules = [
   {
-    ruleSelector: '.main-form .form__input--name',
+    ruleSelector: '.expert-form .form__input--name',
     rules: [
       {
         rule: 'minLength',
@@ -18,7 +18,7 @@ const mainFormRules = [
     ]
   },
   {
-    ruleSelector: '.main-form .form__input--phone',
+    ruleSelector: '.expert-form .form__input--phone',
     tel: true,
     telError: 'Введите корректный телефон',
     rules: [
@@ -30,12 +30,21 @@ const mainFormRules = [
     ]
   },
   {
-    ruleSelector: '.custom-checkbox__field',
+    ruleSelector: '.expert-form .custom-checkbox__field',
     rules: [
       {
         rule: 'required',
         value: true,
         errorMessage: 'Согласитесь с обработкой данных!'
+      }
+    ]
+  },
+  {
+    ruleSelector: '.expert-form .form__input--question',
+    rules: [
+      {
+        rule: 'required',
+        value: true,
       }
     ]
   },
@@ -48,6 +57,7 @@ const afterForm = () => {
     modal.close();
   }, 7000)
 };
-if(document.querySelector(".main-form")){
-validateForms('.main-form', mainFormRules, form_object.url, form_object.nonce, 'form_action', afterForm);
+if(document.querySelector(".expert-form")){
+  validateForms('.expert-form', expertFormRules, form_object.url, form_object.nonce, 'form_action', afterForm);
 }
+

@@ -21,6 +21,7 @@ function add_templates_to_dropdown( $templates ) {
 	$templates['templates/page-board/page-board.php']         = 'Наблюдательный совет';
 	$templates['templates/page-about/page-about.php']         = 'Об университете';
 	$templates['templates/page-constructor/page-constructor.php']         = 'Конструктор';
+  $templates['templates/expert/expert.php']         = 'Конструктор';
 
 	return $templates;
 }
