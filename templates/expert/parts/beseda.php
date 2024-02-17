@@ -25,7 +25,7 @@
         <button class="btn-reset button form__button">Отправить</button>
         <label class="custom-checkbox form__checkbox">
           <input type="checkbox" class="custom-checkbox__field">
-          <span class="custom-checkbox__content">Нажимая галочку «Согласен» Вы подтверждаете свое согласие на обработку <a href="/">персональных данных</a></span>
+          <span class="custom-checkbox__content">Нажимая галочку «Согласен» Вы подтверждаете свое согласие на обработку <a href="<?= get_the_privacy_policy_link() ?>">персональных данных</a> и <a href="/offering/">офертой</a></span>
         </label>
       </form>
     </div>
