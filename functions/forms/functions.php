@@ -49,7 +49,12 @@ function ajax_action_callback() {
 	} else {
 
 		// Указываем адресата
-		$email_to = 'drake9100@mail.ru';
+		$email_to = '';
+
+    if(!$email_to) {
+      $email_to = get_option('admin_email');
+    }
+
     if ( empty( $_POST['question'] ) || ! isset( $_POST['question'] ) ) {
       $body    = "Имя: $form_name \nТелефон для связи: $form_phone \n\nПосетитель оставил заявку на услугу: $form_service";
     } else{
