@@ -21,6 +21,10 @@ if(!$service_list) {
         <button class="btn-reset button service__button" data-graph-path="callback" data-modal-service="<?= get_service_title($post) ?>">Записаться</button>
       </li>
       <?php endforeach; ?>
+      <li class="service-list__item service">
+        <div class="service__name">Беседа с врачом</div>
+        <a class="btn-reset button service__button" href="/consulting/">Подробнее</a>
+      </li>
     </ul>
     <button class="services__show-more btn-reset button--stroke">Показать ещё</button>
   </div>
